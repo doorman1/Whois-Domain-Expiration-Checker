@@ -1,0 +1,44 @@
+#Whois Domain Expiration-Checker by Doorman
+#d@omit.io
+#https://github.com/doorman1
+#
+#
+#
+# Configuration for Expiring/Deleted HOST name BOT
+#-------------------------------------------------
+
+# time interval (in seconds) between consecutive checks for a single TLD
+tld_check_interval = 10
+
+# time interval (in days) between consecutive checks for a single WORD
+word_check_interval = 30
+
+# time interval (in days) between consecutive checks for a single DOMAIN
+domain_check_interval = 30
+
+# retrieve domains expiring in N number of days
+domain_expiring_days = 30
+
+# maximum length of domain name word to search from dictionary
+max_domain_length = 6
+
+# include domains in email which expired in the past N number of days
+email_days_before = 1
+
+# include domains in email which will expire in the coming N number of days
+email_days_after = 1
+
+# email message
+send_mail_to_name = Doorman
+send_mail_to = d@omit.io
+mail_subject = Expiring / Deleted domains email report
+mail_body = Report for today is found in the attached text file. <br> Thanks.
+
+# send email configuration
+mailer_mailhost = smtp.gmail.com
+mailer_userid = yourgmailaccount@gmail.com
+mailer_password = yourgmailpassword
+mailer_secure = tls
+mailer_port = 587
+mailer_from = yourgmailaccount@gmail.com
+mailer_from_name = Host Info

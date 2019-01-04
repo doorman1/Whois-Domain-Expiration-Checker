@@ -1,0 +1,58 @@
+{
+    "name": "mallardduck/whois-client",
+    "type": "library",
+    "description": "A very basic Whois client for PHP. The library is limited in function since it's intended to be a low-level client that handles only request and raw output.",
+    "keywords": [
+        "domain",
+        "idn",
+        "lookup",
+        "punycode",
+        "whois",
+        "whois-client",
+        "unicode"
+    ],
+    "homepage": "https://github.com/mallardduck/whois-client",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Dan Pock",
+            "email": "self@danpock.me",
+            "homepage": "https://danpock.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.6 || ~7.0",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "hoa/socket": "1.17.05.16",
+        "league/uri": "^5.3",
+        "tightenco/collect": "^5.5 || ^5.6",
+        "true/punycode": "^2.1.1"
+    },
+	"require-dev": {
+        "phpunit/phpunit": "^6.5.8 || ^7.1",
+        "squizlabs/php_codesniffer": "^3.2",
+        "php-coveralls/php-coveralls": "^2.0",
+        "escapestudios/symfony2-coding-standard": "3.x-dev"
+    },
+	"autoload": {
+        "psr-4": {
+            "MallardDuck\\Whois\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MallardDuck\\Whois\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "semver": "php-semver-checker-git suggest --allow-detached -vvv --details --include-before=src --include-after=src"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

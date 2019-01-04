@@ -1,5 +1,4 @@
 #Whois-Domain-Expiration-Checker
-Whois-Domain-Expiration-Checker
 
 A simple PHP script that checks recent domains that have expired, not been paid for, etc and are available against search terms you put in. You can limit the search by TLDR's (the thing after the period on a domain, like .com or .net), by name, by number of characters of the domain name, or even by when it was released.
 
